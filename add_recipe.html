@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <style>
+        ul.navbar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+       }
+       ul.navbar li{
+        float: left;
+       }
+       ul.navbar li a{
+        display: block; color: white; text-align: center; padding: 25px; text-decoration: none;
+       }
+       ul.navbar li a:hover{
+        background-color: #111111;
+       }
+       body{background-color: #f0f8ff;}
+    </style>
+</head>
+<body>
+     <nav>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add_recipe.html">Add Recipe</a></li>
+        <li><a href="recipe_list.html">Recipe List</a></li>
+        <li><a href="feedback_contact.html">Feedback/Contact</a></li>
+    </ul>
+    </nav>
+    <h1>Add Your Recipe</h1>
+    <form method="POST" action="/submit">
+        <label for="fname">Recipe Name:</label>
+        <input type="text" id="fname" name="first-name"><br><br>
+        <label for="ingred">Ingredients:</label><br>
+        <textarea id="ingred" name="ingredients" cols="35" rows="5"></textarea><br><br>
+        <label for="cInstruct">Cooking Instructions:</label><br>
+        <textarea id="cInstruct" name="cooking-instructions" cols="35" rows="5"></textarea><br><br>
+        <label for="url">Image URL:</label>
+        <input type="text" id="url" name="img-url"><br><br>
+        <label for="categ">Category</label>
+        <select id="categ" name="food-category">
+            <option value="desserts&sweets">Desserts & Sweets</option>
+            <option value="drinks">Drinks</option>
+            <option value="quik meals">Quik Meals</option>
+            <option value="soups">Soups</option>
+            <option value="breads">Breads</option>
+            <option value="breads">Sauces</option>
+            <option value="traditional">Traditional</option></select><br><br>
+            <input type="submit" value="Add Recipe">
+    </form>
+</body>
+</html>

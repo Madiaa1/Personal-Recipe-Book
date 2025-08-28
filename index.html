@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Recipe Book</title>
+    <style>
+      ul.navbar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+       }
+       ul.navbar li{
+        float: left;
+       }
+       ul.navbar li a{
+        display: block; color: white; text-align: center; padding: 25px; text-decoration: none;
+       }
+       ul.navbar li a:hover{
+        background-color: #111111;
+       }
+       body{background-color: #f0f8ff;}
+       
+    </style>
+</head>
+<body >
+    <nav>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add_recipe.html">Add Recipe</a></li>
+        <li><a href="recipe_list.html">Recipe List</a></li>
+        <li><a href="feedback_contact.html">Feedback/Contact</a></li>
+    </ul>
+    </nav>
+    <h1 style="text-align: center; margin-top: 50px;">Welcome to My Recipe Book</h1>
+    <p>This book is a place where I collect my favorite recipes. Each recipe is simple to follow and made with love. I hope these dishes bring joy and good taste to your table. Cooking is not just about food, it’s also about sharing happiness with family and friends.</p>
+    <h1>Recipe of the Day:</h1>
+    <h2>Kabuli Pulao (کابلی پلو)</h2>
+    <p>Kabuli Pulao is Afghanistan’s national dish. Fragrant rice cooked with lamb or beef, mixed with sweet carrots, raisins, and almonds. It’s a mix of sweet and savory flavors.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb5FH4i-sz0oppLY8roRsxlb_Qrt9uv45zZw&s" alt="Qabuli's pic" width="400" height="300"><br><br>
+    <a href="full_recipe_Qabuli.html">View Full Recipe of Kabuli Pulao</a>
+    <div class="popular-recipe">
+        <h1>Popular Recipes</h1>
+        <ul>
+        <li>Kebab (grilled skewered meat)</li>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEsQ8xkUkmXdpGcxOXqsKcPHiIOFoi_mJaOQ&s" alt="Kabab's Pic">
+        <p>Kabeb is a variety of grilled, skewered, or flat-pattied meats, most often lamb, but also beef and chicken, that are seasoned with onion, garlic, and spices like cumin and coriander.</p>
+    </ul>
+     <ul>
+        <li>Firni (milk custard)</li>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnuRJuSnqyJasXDkhQgyITU5EVfQ3CzbP2dg&s" alt="Firini's pic">
+        <p>Firni is a delicate and creamy rice pudding, is a beloved dessert in Afghan cuisine. Made with a few simple ingredients like milk, sugar, rice flour, and cardamom, this sweet treat offers a comforting and indulgent experience.</p>
+    </ul>
+    <ul>
+        <li>Afghan Green Tea</li>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7dL0MjUucvyQ5iE_oPiAQmKjSVYd_TrQMaQ&s" alt="Green Team Pic">
+        <p>Afghan Green Tea is a traditional, aromatic green tea beverage brewed with green tea leaves and various spices like cardamom, cinnamon, and saffron.</p>
+    </ul>
+    </div>
+    <p>Want to see a full recipe list? <a href="recipe_list.html">Click here to see a full recipe list :)</a></p><br><br>
+    <footer>
+    <form method="POST" action="/submit">
+        <fieldset>
+            <legend>Which Afghan dish do you want to try this week?</legend>
+            <input type="radio" id="kababb" name="week-dish" value="kabak">
+            <label for="kababb">Kabab</label><br>
+            <input type="radio" id="mantoo" name="week-dish" value="manto">
+            <label for="mantoo">Manto</label><br>
+            <input type="radio" id="pizza" name="week-dish" value="pizza">
+            <label for="pizza">Pizza</label><br>
+            <input type="radio" id="qaboli" name="week-dish" value="qaboli">
+            <label for="qaboli">Kabuli Palaw</label><br><br>
+            <button type="submit">Submit</button>
+        </fieldset>
+        </footer>
+    </form>
+</body>
+</html>

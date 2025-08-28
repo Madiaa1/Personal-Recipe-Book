@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        ul.navbar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+       }
+       ul.navbar li{
+        float: left;
+       }
+       ul.navbar li a{
+        display: block; color: white; text-align: center; padding: 25px; text-decoration: none;
+       }
+       ul.navbar li a:hover{
+        background-color: #111111;
+       }
+       body{background-color: #f0f8ff;}
+    </style>
+</head>
+<body>
+     <nav>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add_recipe.html">Add Recipe</a></li>
+        <li><a href="recipe_list.html">Recipe List</a></li>
+        <li><a href="feedback_contact.html">Feedback/Contact</a></li>
+    </ul>
+    </nav>
+
+    <h1>Our Contact information:</h1>
+    <a href="mailto:mahdiarasooli24@gmail.com">Email</a>
+    <p>Phone Number: +93730907879</p>
+    <p>Social Media Links:</p>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">Youtube</a><br><br><br>
+
+    <h1>Feedback Form</h1>
+    <form method="POST" action="/submit">
+        <label for="firstName">Name:</label><br>
+        <input type="text" id="firstName" name="fname" placeholder="write your name here"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="write your email here"><br><br>
+        <label for="message">Message or Feedback:</label><br>
+        <textarea id="message" name="feedback-message" cols="40" rows="5"></textarea><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
