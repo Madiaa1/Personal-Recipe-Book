@@ -5,26 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Recipe</title>
     <style>
-        ul.navbar{
+    ul.navbar {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
         background-color: #333333;
-       }
-       ul.navbar li{
-        float: left;
-       }
-       ul.navbar li a{
-        display: block; color: white; text-align: center; padding: 25px; text-decoration: none;
-       }
-       ul.navbar li a:hover{
-        background-color: #111111;
-       }
-       body{background-color: #f0f8ff;}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    text-decoration: none;
+}
+ul.navbar li a:hover{
+    background-color: #111111;
+}
+body{
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main{
+    padding: 20px;
+}
+h1{text-align: center;}
+a {
+    display: inline-block;
+    margin: 5px 10px;
+    color: #36373d;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #111;
+}
+@media (max-width: 600px) {
+    ul.navbar li a {
+        padding: 15px 20px;
+    }
+}
     </style>
 </head>
 <body>
+    <header>
      <nav>
     <ul class="navbar">
         <li><a href="index.html">Home</a></li>
@@ -33,16 +84,18 @@
         <li><a href="feedback_contact.html">Feedback/Contact</a></li>
     </ul>
     </nav>
+    </header>
+    <main>
     <h1>Add Your Recipe</h1>
     <form method="POST" action="/submit">
         <label for="fname">Recipe Name:</label>
-        <input type="text" id="fname" name="first-name"><br><br>
+        <input type="text" id="fname" name="first-name"><br>
         <label for="ingred">Ingredients:</label><br>
-        <textarea id="ingred" name="ingredients" cols="35" rows="5"></textarea><br><br>
+        <textarea id="ingred" name="ingredients" cols="35" rows="5"></textarea><br>
         <label for="cInstruct">Cooking Instructions:</label><br>
-        <textarea id="cInstruct" name="cooking-instructions" cols="35" rows="5"></textarea><br><br>
+        <textarea id="cInstruct" name="cooking-instructions" cols="35" rows="5"></textarea><br>
         <label for="url">Image URL:</label>
-        <input type="text" id="url" name="img-url"><br><br>
+        <input type="text" id="url" name="img-url"><br>
         <label for="categ">Category</label>
         <select id="categ" name="food-category">
             <option value="desserts&sweets">Desserts & Sweets</option>
@@ -51,8 +104,12 @@
             <option value="soups">Soups</option>
             <option value="breads">Breads</option>
             <option value="breads">Sauces</option>
-            <option value="traditional">Traditional</option></select><br><br>
+            <option value="traditional">Traditional</option></select><br>
             <input type="submit" value="Add Recipe">
     </form>
+    </main>
+    <footer style="text-align:center; padding:20px; background:#333; color:white;">
+  <p>&copy; 2025 My Recipe Book</p>
+    </footer>
 </body>
 </html>

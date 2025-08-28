@@ -1,168 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe List</title>
-    <style>
-         ul.navbar{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333333;
-       }
-       ul.navbar li{
-        float: left;
-       }
-       ul.navbar li a{
-        display: block; color: white; text-align: center; padding: 25px; text-decoration: none;
-       }
-       ul.navbar li a:hover{
-        background-color: #111111;
-       }
-       body{background-color: #f0f8ff;}
-       table, th, td{border: 1px solid black; border-collapse: collapse;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe List</title>
+<style>
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center; 
+}
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px;  
+    text-decoration: none;
+}
+ul.navbar li a:hover {
+    background-color: #111111;
+}
+a{
+    margin: 5px 10px;
+}
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+td a {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+td img {
+    width: 120px;  /* all images same size :)*/
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    margin: 5px auto;
+}
+@media (max-width: 600px) {
+    ul.navbar li a {
+        padding: 15px 20px;
+    }
+    th, td {
+        font-size: 14px;
+        padding: 5px;
+    }
+    td img {
+        width: 80px;
+        height: 80px;
+    }
+    }
+</style>
 </head>
 <body>
-    <nav>
+<header>
+  <nav>
     <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="add_recipe.html">Add Recipe</a></li>
-        <li><a href="recipe_list.html">Recipe List</a></li>
-        <li><a href="feedback_contact.html">Feedback/Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="add_recipe.html">Add Recipe</a></li>
+      <li><a href="recipe_list.html">Recipe List</a></li>
+      <li><a href="feedback_contact.html">Feedback/Contact</a></li>
     </ul>
-    </nav>
-    <h1>Recipe List</h1>
+  </nav>
+</header>
+<main>
+  <section>
     <form method="POST" action="/submit">
-        <label for="category">Filter by Category</label>
-        <select id="category" name="Categoriess">
-            <option value="all">All</option>
-            <option value="sweets">Desserts & Sweets</option>
-            <option value="quikMeals">Quik Meals</option>
-            <option value="traditional">Traditionals</option>
-            <option value="drinks">Drinks</option>
-            <option value="soups">Soups</option>
-            <option value="breads">Breads</option>
-            <option value="breads">Sauces</option>
-
-        </select>
+        <h1>Recipe List</h1>
+      <label for="category">Filter by Category:</label>
+      <select id="category" name="categories">
+        <option value="all">All</option>
+        <option value="sweets">Desserts & Sweets</option>
+        <option value="quickMeals">Quick Meals</option>
+        <option value="traditional">Traditionals</option>
+        <option value="drinks">Drinks</option>
+        <option value="soups">Soups</option>
+        <option value="breads">Breads</option>
+        <option value="sauces">Sauces</option>
+      </select>
     </form>
-    <h1>Recipe Categories</h1>
+  </section>
+  <section>
+    <h2>Recipe Categories</h2>
     <table>
+      <thead>
         <tr>
-            <th>Desserts & Sweets</th>
-            <th>Quick Meals</th>
-            <th>Traditional Foods</th>
-            <th>Drinks</th>
-            <th>Soups</th>
-            <th>Breads</th>
-            <th>Sauces</th>
-            <th>Fast foods</th>
+          <th>Desserts & Sweets</th>
+          <th>Quick Meals</th>
+          <th>Traditional Foods</th>
+          <th>Drinks</th>
+          <th>Soups</th>
+          <th>Breads</th>
+          <th>Sauces</th>
+          <th>Fast foods</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
-            <td>
-                <a href="#">Firni (فرنی)</a><br>
-                <img src="https://www.afghanaid.org.uk/GetImage.aspx?IDMF=d6463083-4c6a-449d-b3c5-4540d7202fda&w=375&h=355&src=mc" alt="Firni" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Bolani (بولانی)</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-6Zv0s09rwcKMd1maJ_8Qx4bN1LuwFbcM7Q&s" alt="Bolani" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Mantu (منتو)</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMJ8grlURf9X0M0q_YEi-SudJ3wu09TwLcQ&s" alt="Mantu" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Afghan Green Tea</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpCryJYdYRnNf1DdkOk_8yHU9KIYf5sromyQ&s" alt="Tea" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Shorwa</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8n0MjgSKCn6J8ED8io_WDUUQC-XDKzkdOrg&s" alt="Shorba" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Naan</a><br>
-                <img src="https://i.ytimg.com/vi/HdALxpzuXqc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGHIgSygpMA8=&rs=AOn4CLAKZq3LMgjLMnsQiiAx315WJCnZuQ" alt="Naan" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Kofta (کوفته)</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDuYz0kYUNKZEv5aevL5TPlX2WkAsk0PUFBA&s" alt="Kofta" width="150" height="150">
-            </td>
-             <td>
-                <a href="#">Chapli Kabab</a><br>
-                <img src="https://i.ytimg.com/vi/r7uHBnio2vE/maxresdefault.jpg" alt="Chapli Kabab" width="150" height="150">
-            </td>
+          <td>
+            <a href="#">Firni (فرنی)</a>
+            <img src="https://www.afghanaid.org.uk/GetImage.aspx?IDMF=d6463083-4c6a-449d-b3c5-4540d7202fda&w=375&h=355&src=mc" alt="Firni">
+            <a href="#">Jalebi (جلبی)</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTl2gWnfu6XbHMHspZKggVVzENIq0pMlphw&s" alt="Jalebi">
+            <a href="#">Sheer Payra (شیر پیرا)</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKaPmLhAiysOBp3becYW-mapGppyd78C_YQ&s" alt="Sheer Payra">
+          </td>
+
+          <td>
+            <a href="#">Bolani (بولانی)</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-6Zv0s09rwcKMd1maJ_8Qx4bN1LuwFbcM7Q&s" alt="Bolani">
+            <a href="#">Sambusa (سمبوسه)</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2oJjxm7SrAHP112gHcB5RJkLYom4AgzLlzg&s" alt="Sambusa">
+            <a href="#">Afghan Hamburger</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ZvpP_CMNf8WCrPBSMqlYnGFaSrlXT3j9-g&s" alt="Hamburger">
+          </td>
+
+          <td>
+            <a href="#">Mantu (منتو)</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMJ8grlURf9X0M0q_YEi-SudJ3wu09TwLcQ&s" alt="Mantu">
+            <a href="#">Kabab (کباب)</a>
+            <img src="https://dobbernationloves.com/wp-content/uploads/2020/08/Beef-Kafta-Afghan-Kebab-Recipe-18.jpeg" alt="Kabab">
+            <a href="#">Ashak (آشک)</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHaUoumYzTq4rqWAh3lDKHOEK29r2EImO5ew&s" alt="Ashak">
+          </td>
+
+          <td>
+            <a href="#">Afghan Green Tea</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpCryJYdYRnNf1DdkOk_8yHU9KIYf5sromyQ&s" alt="Green Tea">
+            <a href="#">Dogh (دوغ)</a>
+            <img src="https://i.ytimg.com/vi/AW5yCpLckXc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBIcCXW3mqiVNBoZpuVFBPaKLi6Pw" alt="Dogh">
+            <a href="#">Mirinda Orange</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQot22O-0Ds68QekJjUok1qi1pQ7dLvbYRt-w&s" alt="Mirinda">
+          </td>
+
+          <td>
+            <a href="#">Shorwa</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8n0MjgSKCn6J8ED8io_WDUUQC-XDKzkdOrg&s" alt="Shorwa">
+            <a href="#">Yakhni</a>
+            <img src="https://i.ytimg.com/vi/5Tpv9IJaank/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBU-L46ASFL6s4POhvFNNrLDLfvkA" alt="Yakhni">
+            <a href="#">Ash</a>
+            <img src="https://cookingwithayeh.com/wp-content/uploads/2024/03/Ash-Reshteh-SQ-16-2.jpg" alt="Ash">
+          </td>
+
+          <td>
+            <a href="#">Naan</a>
+            <img src="https://i.ytimg.com/vi/HdALxpzuXqc/maxresdefault.jpg" alt="Naan">
+            <a href="#">Chapati</a>
+            <img src="https://i.ytimg.com/vi/gbhZVGGtWH8/sddefault.jpg" alt="Chapati">
+            <a href="#">Naan-e Roghani</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm-4IcfkSI-ZVwaXqIrHpu_1ED2YeXtPCEsQ&s" alt="Naan-e Roghani">
+          </td>
+
+          <td>
+            <a href="#">Kofta (کوفته)</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDuYz0kYUNKZEv5aevL5TPlX2WkAsk0PUFBA&s" alt="Kofta">
+            <a href="#">Qorma-e-Gosht</a>
+            <img src="https://i.ytimg.com/vi/HEBbIt6jXHc/maxresdefault.jpg" alt="Qorma-e-Gosht">
+            <a href="#">Afghani Pizza</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZYKtYlQhrQZd3zvItxbdqegHk-AtHnbfTeA&s" alt="Afghani Pizza">
+          </td>
+
+          <td>
+            <a href="#">Chapli Kabab</a>
+            <img src="https://i.ytimg.com/vi/r7uHBnio2vE/maxresdefault.jpg" alt="Chapli Kabab">
+            <a href="#">Jujeh Kabab</a>
+            <img src="https://www.thedeliciouscrescent.com/wp-content/uploads/2020/11/Jujeh-Kabab-8.jpg" alt="Jujeh Kabab">
+            <a href="#">Afghani Pizza</a>
+            <img src="https://i.ytimg.com/vi/YaeRqgxeOEY/maxresdefault.jpg" alt="Afghani Pizza">
+          </td>
         </tr>
-        <tr>
-            <td>
-                <a href="#">Jalebi (جلبی)</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTl2gWnfu6XbHMHspZKggVVzENIq0pMlphw&s" alt="Jalabi" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Sambusa (سمبوسه)</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2oJjxm7SrAHP112gHcB5RJkLYom4AgzLlzg&s" alt="Sambusa" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Kabab (کباب)</a><br>
-                <img src="https://dobbernationloves.com/wp-content/uploads/2020/08/Beef-Kafta-Afghan-Kebab-Recipe-18.jpeg" alt="Kabab" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Dogh (دوغ)</a><br>
-                <img src="https://i.ytimg.com/vi/AW5yCpLckXc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBIcCXW3mqiVNBoZpuVFBPaKLi6Pw" alt="Dogh" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Yakhni</a><br>
-                <img src="https://i.ytimg.com/vi/5Tpv9IJaank/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBU-L46ASFL6s4POhvFNNrLDLfvkA" alt="Yakhni" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Chapati</a><br>
-                <img src="https://i.ytimg.com/vi/gbhZVGGtWH8/sddefault.jpg" alt="Chapati" width="150" height="150">
-            </td>
-             <td>
-                <a href="#">Qorma-e-Gosht</a><br>
-                <img src="https://i.ytimg.com/vi/HEBbIt6jXHc/maxresdefault.jpg" alt="Gosht" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Jujeh Kabab</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyccimXPkYPJ9Vw7o4Zfd4qidO9ImKND3d6w&s" alt="Joja Kabab" width="150" height="150">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="#">Sheer Payra (شیر پیرا)</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKaPmLhAiysOBp3becYW-mapGppyd78C_YQ&s" alt="SheerPera" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Afghan Hamburger</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ZvpP_CMNf8WCrPBSMqlYnGFaSrlXT3j9-g&s" alt="Bargar" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Ashak (آشک)</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHaUoumYzTq4rqWAh3lDKHOEK29r2EImO5ew&s" alt="Ashak" width="150" height="150">
-            </td>
-            <td>
-                <a href="#">Mirinda Orange</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQot22O-0Ds68QekJjUok1qi1pQ7dLvbYRt-w&s" alt="Tea" width="150" height="150">
-            </td>
-            <td>
-                <a href="">Ash</a><br>
-                <img src="https://cookingwithayeh.com/wp-content/uploads/2024/03/Ash-Reshteh-SQ-16-2.jpg" alt="Ash" width="150" height="150"> 
-            </td>
-            <td>
-                <a href="#">Naan-e Roghani</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm-4IcfkSI-ZVwaXqIrHpu_1ED2YeXtPCEsQ&s" alt="Naan-e Roghani" width="150" height="150">
-            </td>
-             <td>
-                <a href="#">Afghani Pizza</a><br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZYKtYlQhrQZd3zvItxbdqegHk-AtHnbfTeA&s" alt="Manto Sauces" width="150" height="150">
-            </td>
-             <td>
-                <a href="#">Afghani Pizza</a><br>
-                <img src="https://i.ytimg.com/vi/YaeRqgxeOEY/maxresdefault.jpg" alt="pizza" width="150" height="150">
-            </td>
-        </tr>
+      </tbody>
     </table>
+  </section>
+</main>
+
+<footer style="text-align:center; padding:20px; background:#333; color:white;">
+  <p>&copy; 2025 My Recipe Book</p>
+</footer>
 </body>
 </html>
+

@@ -5,27 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Recipe Of Kabuli Pulao</title>
     <style>
-        ul.navbar{
+    ul.navbar {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
         background-color: #333333;
-       }
-       ul.navbar li{
-        float: left;
-       }
-       ul.navbar li a{
-        display: block; color: white; text-align: center; padding: 25px; text-decoration: none;
-       }
-       ul.navbar li a:hover{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    ul.navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        text-decoration: none;
+    }
+    ul.navbar li a:hover{
         background-color: #111111;
-       }
-       body{background-color: #f5f5f5;}
-       
+    }
+    a{
+        margin: 5px 10px;
+    }
+    body{
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        padding: 20px;
+    }
+    h1{
+        text-align: center;
+        margin-top: 40px;
+    }
+    div{
+        text-align: center;
+    }
+    @media (max-width: 600px) {
+    ul.navbar li a {
+      padding: 15px 20px;
+    }
+  }
     </style>
 </head>
 <body>
+    <header>
     <nav>
     <ul class="navbar">
         <li><a href="index.html">Home</a></li>
@@ -34,8 +60,11 @@
         <li><a href="feedback_contact.html">Feedback/Contact</a></li>
     </ul>
     </nav>
-    <h1 style="text-align: center; margin-top: 50px;">Kabuli Pulao (کابلی پلو)</h1>
-    <div style="text-align: center;">
+    </header>
+    <main>
+        <section>
+    <h1>Kabuli Pulao (کابلی پلو)</h1>
+    <div>
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5BM32ppIzoArtqo4vkgK7IJk9vW-AisnXg&s" alt="Qabuli's Pic" width="400" height="250">
 </div>
     <h2>Ingredients:</h2>
@@ -62,10 +91,15 @@
         <li>Steam together: Cover the pot and cook on very low heat for 10–15 minutes so flavors mix.</li>
         <li>Serve: Mix gently before serving. Enjoy!</li>
     </ol><br>
+    </section>
+    <section>
     <p>Was this recipe helpful?</p>
-     <button onclick="alert('Thanks! I’m glad it was helpful.🎉')">🙂</button>
-     <button onclick="alert('Sorry! I’ll try to improve.💡')">🙁</button>
-
-    
+    <button onclick="alert('Thanks! I’m glad it was helpful.🎉')">🙂</button>
+    <button onclick="alert('Sorry! I’ll try to improve.💡')">🙁</button>
+    </section>
+    </main>
+    <footer style="text-align:center; padding:20px; background:#333; color:white;">
+    <p>&copy; 2025 My Recipe Book</p>
+</footer>
 </body>
 </html>
